@@ -128,6 +128,10 @@ a:hover{
 
 .left-sidebar{
     display: flex;
+    flex-shrink: 0;
+    position: static;
+    border-radius: var(--border-radius);
+    background: var(--left-bg);
 }
 
 .right-sidebar{
@@ -190,17 +194,6 @@ main{
     vertical-align: super;
 }
 
-.active {
-    top: 10%;
-    left: 0px;
-    border-radius: var(--border-radius);
-    /* width: 250px;
-    height: 100%;
-    background-color: var(--fg);
-    transition: left 0.3s ease; 
-    z-index: 100;
-    display: flex; */
-}
 
 footer{
     height: 10%;

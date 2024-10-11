@@ -20,6 +20,12 @@
     gap: 10px;
 }
 
+.active {
+    top: 10%;
+    left: 0px;
+    border-radius: var(--border-radius);
+}
+
 @media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
     .row{
         flex-direction: column;
@@ -31,14 +37,17 @@
     }
     .left-sidebar {
         position: fixed;
-        border-radius: var(--border-radius);
         top: 10%;
         left: -250px;
         width: 250px;
         height: 100%;
-        background: var(--left-bg);
         transition: left 0.3s ease; 
         z-index: 100;
+    }
+    .active {
+        top: 10%;
+        left: 0px;
+        border-radius: var(--border-radius);
     }
 }
 @media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ 
@@ -53,7 +62,15 @@
         overflow: visible;
         white-space: normal;
     }
-
+    .left-sidebar {
+        position: fixed;
+        top: 10%;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        transition: left 0.3s ease; 
+        z-index: 100;
+    }
 }
 @media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
     .burger{
@@ -67,6 +84,15 @@
         overflow: visible;
         white-space: normal;
     }
+    .left-sidebar {
+        position: fixed;
+        top: 10%;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        transition: left 0.3s ease; 
+        z-index: 100;
+    }
 }
 @media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
     .burger{
@@ -74,15 +100,36 @@
     }
     .row{
         flex-direction: row;
-    } 
+    }
+    .left-sidebar{
+        display: flex;
+        flex-shrink: 0;
+        position: static;
+        border-radius: var(--border-radius);
+        background: var(--left-bg);
+    }
 }
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
     .row{
         flex-direction: row;
     }
+    .left-sidebar{
+        display: flex;
+        flex-shrink: 0;
+        position: static;
+        border-radius: var(--border-radius);
+        background: var(--left-bg);
+    }
 }
 @media (min-width:1281px) { /* hi-res laptops and desktops */ 
     .row{
         flex-direction: row;
+    }
+    .left-sidebar{
+        display: flex;
+        flex-shrink: 0;
+        position: static;
+        border-radius: var(--border-radius);
+        background: var(--left-bg);
     }
 }
