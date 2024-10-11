@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/general.css">
+
+    <!-- Link to fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Read Bible</title>
+</head>
+<body>
+    <header class="container row center">
+        <nav class="permanent-row center">
+            <div class="burger column" id="burger">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+            <a href="#"><h1 class="logo">Read Bible</h1></a>
+            <ul class="nav-items">
+                <li>
+                    <div class="search-box permanent-row center">
+                        <input class="search" type="search" name="" id="search">
+                        <span id="search-btn"><i class="fa fa-search search-btn"></i></span>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page row">
+        <div class="row gap-10">
+            <div class="left-sidebar column" id="left-sidebar">
+                <h3 class="version-heading">Translations</h3>
+                <ul class="translations">
+                    <li><a class="version vibrate" href="#">King James Version</a></li>
+                    <li><a class="version vibrate" href="#">New King James Version</a></li>
+                    <li><a class="version vibrate" href="#">Louis Segond (LSG) French</a></li>
+                    <li><a class="version vibrate" href="#">Reina-Valera 1960 (RVR1960)</a></li>
+                </ul>
+            </div>
+            <div class="row gap-10">
+                <main class="main" id="main">
+                    <div class="bible" id="bible">
+                        <p class="verse"><span class="verse-number">1</span> "Truly, truly, I say to you, he who does not enter the sheepfold by the door but climbs in by another way, that man is a thief and a robber.</p>
+                        <p class="verse"><span class="verse-number">2</span> But he who enters by the door is the shepherd of the sheep.</p>
+                        <p class="verse"><span class="verse-number">3</span> To him the gatekeeper opens. The sheep hear his voice, and he calls his own sheep by name and leads them out.</p>
+                        <p class="verse"><span class="verse-number">4</span> When he has brought out all his own, he goes before them, and the sheep follow him, for they know his voice.</p>
+                        <p class="verse"><span class="verse-number">5</span> A stranger they will not follow, but they will flee from him, for they do not know the voice of strangers."</p>
+                        <p class="verse"><span class="verse-number">6</span> This figure of speech Jesus used with them, but they did not understand what he was saying to them.</p>
+                        <p class="verse"><span class="verse-number">7</span> So Jesus again said to them, "Truly, truly, I say to you, I am the door of the sheep.</p>
+                        <p class="verse"><span class="verse-number">8</span> All who came before me are thieves and robbers, but the sheep did not listen to them.</p>
+                        <p class="verse"><span class="verse-number">9</span> I am the door. If anyone enters by me, he will be saved and will go in and out and find pasture.</p>
+                        <p class="verse"><span class="verse-number">10</span> The thief comes only to steal and kill and destroy. I came that they may have life and have it abundantly."</p>
+                    </div>  
+                </main>
+                <div class="right-sidebar">
+                    <h3 class="resources-heading">Other Resources</h3>
+                    <ul class="other-esources">
+                        <li><a class="list-item vibrate no-wrap" href="#">My Personal Blog</a></li>
+                        <li><a class="list-item vibrate no-wrap" href="#">Buy Me A Coffee</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="row center">
+        <p>&copy; <span id="current-year"></span> Oluwatosin Joseph Durodola </p>
+    </footer>
+    <script>
+        // JavaScript to get the current year
+        const currentYear = new Date().getFullYear();
+        document.getElementById('current-year').textContent = currentYear;
+    </script>
+</body>
+<script src="utils/utils.js"></script>
+<script src="utils/search_bible.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/open_bible.js"></script>
+
+<!-- link to fontawesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+</html>

@@ -1,0 +1,230 @@
+:root {
+    --bg: linear-gradient(45deg, #D2A56D, #CE8B54);
+    /* --dark-bg: #ffcb9a; */
+    --dark-bg: linear-gradient(45deg, #DEC584, #E2D7A7);
+    --left-bg: linear-gradient(45deg, #E2D7A7, #DEC584);
+    --fg: #603F26;
+    --links: #683908;
+    --links-hover: #645215;
+    --border-radius: 10px;
+    --stick-handle: linear-gradient(90deg, #D2A56D, #d49e72);
+}
+  
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+header{
+    height: 10%;
+}
+
+h1{
+    text-align: center;
+    padding: 10px;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+    display: flex;
+    gap: 3px;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    transition: background 0.3s;
+}
+
+.burger-line{
+    width: 20px;
+    height: 3px;
+    background: var(--fg);
+    transition: background 0.3s; 
+}
+
+.burger:hover{
+    background: var(--fg);
+}
+
+/* Change colors of each line on hover */
+.burger:hover .burger-line:nth-child(1) {
+    background: var(--bg);
+}
+
+.burger:hover .burger-line:nth-child(2) {
+    background: var(--bg);
+}
+
+.burger:hover .burger-line:nth-child(3) {
+    background: var(--bg);
+}
+
+/* Active state styles */
+.burger.active {
+    background: var(--fg);
+}
+
+.burger.active .burger-line:nth-child(1) {
+    background: var(--bg);
+}
+
+.burger.active .burger-line:nth-child(2) {
+    background: var(--bg);
+}
+
+.burger.active .burger-line:nth-child(3) {
+    background: var(--bg);
+}
+
+.nav-items{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--links);
+}
+
+a:hover{
+    color: var(--links-hover);
+}
+
+.search-box{
+    border: 2px solid var(--fg);
+    border-radius: var(--border-radius);
+    margin: 10px;
+    padding-right: 5px;
+    background: var(--bg);
+}
+
+.search{
+    font-size: 1.0em;
+    padding: 5px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: var(--border-radius);
+    color: var(--fg);
+    background: var(--bg);
+}
+
+.page{
+    padding: 10px;
+    height: 80%;
+}
+
+.left-sidebar{
+    position: fixed;
+    border-radius: var(--border-radius);
+    top: 10%;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: var(--left-bg);
+    transition: left 0.3s ease; 
+    z-index: 100;
+    display: flex;
+}
+
+.right-sidebar{
+    background: var(--dark-bg);
+    padding: 5px;
+    border-radius: var(--border-radius);
+}
+
+.version-heading, .resources-heading{
+    padding: 5px;
+}
+
+.version, .list-item{
+    border-radius: var(--border-radius);
+    padding: 5px;
+    background: var(--bg);
+    margin: 5px;
+    display: inline-block;
+}
+
+.version:hover{
+    box-shadow: 0 4px 8px var(--fg);
+}
+
+.vibrate:hover{
+    animation: vibrate 0.5s infinite;
+}
+
+@keyframes vibrate {
+    0% { transform: translate(1px, -1px); }
+    /* 25% { transform: translate(-1px, 1px); } */
+    /* 50% { transform: translate(1px, -1px); } */
+    /* 75% { transform: translate(-1px, -1px); } */
+    100% { transform: translate(0); }
+}
+
+.main-section{
+    height: 80%;
+}
+
+main{
+    flex-grow: 2;
+    padding: 10px;
+    background: var(--dark-bg);
+    border-radius: var(--border-radius);
+    overflow-y: scroll;
+}
+
+.bible{
+    font-family: "Sentinel","Gentium Plus","Ezra",Georgia,Times,serif;
+}
+
+.verse{
+    /* margin: 1em; */
+    line-height: 1.5em;
+}
+
+.verse-number {
+    font-size: smaller;
+    vertical-align: super;
+}
+
+.active {
+    top: 10%;
+    left: 0px;
+    border-radius: var(--border-radius);
+    /* width: 250px;
+    height: 100%;
+    background-color: var(--fg);
+    transition: left 0.3s ease; 
+    z-index: 100;
+    display: flex; */
+}
+
+footer{
+    height: 10%;
+    text-align: center;
+}
+
+
+/* for the scroll bar of main */
+main::-webkit-scrollbar {
+    margin: 5px;
+    width: 0.5em;
+}
+ 
+main::-webkit-scrollbar-thumb {  
+  background: var(--stick-handle);
+  outline: none;
+  border-radius: var(--border-radius);
+}
