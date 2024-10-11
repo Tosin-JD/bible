@@ -51,6 +51,7 @@ h1{
 .burger-line{
     width: 20px;
     height: 3px;
+    margin-left: 10px;
     background: var(--fg);
     transition: background 0.3s; 
 }
