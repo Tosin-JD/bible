@@ -127,15 +127,6 @@ a:hover{
 }
 
 .left-sidebar{
-    position: fixed;
-    border-radius: var(--border-radius);
-    top: 10%;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background: var(--left-bg);
-    transition: left 0.3s ease; 
-    z-index: 100;
     display: flex;
 }
 
