@@ -15,9 +15,9 @@ function fetchBibleData(apiUrl) {
         });
 }
 
-// Usage example
-document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = '../bibles/kjv/kjv.json'; 
+function get_data(){
+    const apiUrl = current_bible; 
+    console.log(current_bible);
 
     fetchBibleData(apiUrl)
         .then(data => {
@@ -48,6 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
             console.error('Failed to load the Bible data:', error);
         });
+}
+
+
+// Usage example
+document.addEventListener('DOMContentLoaded', () => {
+    get_data();
 });
 
 
